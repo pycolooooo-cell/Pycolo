@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa Kata Sandi</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Bungee&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="lupapw.css">
+</head>
+<body>
+    <div class="forgot-card">
+        <a href="login.html" class="back-link" id="back-link">
+            <i class="fa-solid fa-chevron-left"></i>Salah pilih? Kembali
+        </a>
+        <h1 id="mainTitle">PYCOLO</h1>
+        <div id="step-1" class="form-step active">
+            <h2>Lupa Kata Sandi</h2>
+            <p class="desc">Silahkan masukkan email Anda untuk mengatur ulang kata sandi.</p>
+
+            <form id="form-email">
+                <input type="email" id="resetEmail" placeholder="masukkan email anda" required>
+                <button type="submit" class="btn-action">Ubah Kata Sandi</button>
+            </form>
+        </div>
+        <div id="step-2" class="form-step">
+            <h2>Cek Email Anda</h2>
+            <p class="desc">Kami telah mengirimkan tautan reset kata sandi ke <span id="userEmailSpan" style="color: #034AD9; font-weight: bold;">Email</span>Masukkan 5 digit yang disebutkan di email</p>
+
+            <form id="form-otp">
+                <div class="otp-container">
+                    <input type="number" class="otp-input" maxlength="1">
+                    <input type="number" class="otp-input" maxlength="1">
+                    <input type="number" class="otp-input" maxlength="1">
+                    <input type="number" class="otp-input" maxlength="1">
+                    <input type="number" class="otp-input" maxlength="1">
+                </div>
+                <button type="submit" class="btn-action">Verifikasi Kode</button>
+            </form>
+        </div>
+
+        <div id="step-3" class="form-step">
+            <h2>Ubah Kata Sandi</h2>
+            <p class="desc">Kata sandi Anda berhasil di atur ulang. Klik konfirmasi untuk mengatur kata sandi baru.</p>
+
+            <form id="form-new-pass">
+                <label>Kata Sandi</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmPass" placeholder="konfirmasi kata sandi" required>
+                    <i class="fa-regular fa-eye-slash toggle-pass" data-target="confirmPass"></i>
+                </div>
+
+                <button type="submit" class="btn-action">konfirmasi</button>
+            </form>
+        </div>
+
+        <div id="step-4" class="form-step">
+            <h2 style="color: #f3fafd; font-size: 2rem; margin-top: 10px;">SUKSES!</h2>
+            <p class="desc">Selamat! kata sandimu berhasil dirubah. Klik lanjutkan untuk login</p>
+
+            <button type="button" class="btn-action" onclick="window.location.href='login.html'">Lanjutkan</button>
+        </div>
+    </div>
+
+    <script src="lupapw.js"></script>
+</body>
+</html>
