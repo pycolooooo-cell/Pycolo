@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Bungee&family=Nunito:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('background1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif; 
+}
+.login-card {
+    width: 420px; 
+    padding: 30px 40px;
+    border-radius: 20px; 
+    background: rgba(0, 149, 255, 0.31); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 2px solid rgba(0, 149, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.login-card .back-link {
+    display: block; 
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #0056b3; 
+    text-decoration: none;
+}
+.login-card h1 { 
+    font-family: 'Bungee', cursive; 
+    color: #F3FAFD; 
+    font-size: 2.5rem; 
+    margin-bottom: 5px;
+    font-weight: 700; 
+    letter-spacing: 0.1em; 
+    text-align: center; 
+}
+.login-card h2 { 
+    font-family: 'Alatsi', sans-serif; 
+    color: #F3FAFD; 
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: left; 
+    letter-spacing: 0.1em; 
+}
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+}
+.login-card label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555; 
+}
+.login-card input { 
+    width: 100%;
+    padding: 12px 15px; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8); 
+    font-family: 'Nunito', sans-serif;
+}
+.password-wrapper {
+    position: relative;
+    width: 100%; 
+}
+
+.password-wrapper #togglePassword {
+    position: absolute;
+    top: 50%; 
+    right: 15px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+    color: #888; 
+    transition: color 0.2s ease; 
+}
+
+.login-card input::-ms-reveal,
+.login-card input::-ms-clear {
+    display: none !important;
+}
+
+.login-card input::-webkit-contacts-auto-fill-button,
+.login-card input::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.forgot-pass {
+    align-self: flex-end; 
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #007BFF; 
+    text-decoration: none;
+}
+.btn-login { 
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #034AD9; 
+    color: #F3FAFD; 
+    font-family: 'Alatsi', sans-serif; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.btn-login:hover {
+    background: #0238a8; 
+}
+.divider-text {
+    width: 100%; 
+    text-align: center;
+    margin: 20px 0;
+    color: #555; 
+    font-size: 0.9rem;
+}
+.btn-google { 
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #FFFFFF;
+    transition: background 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.btn-google:hover {
+    background: #f5f5f5;
+}
+.signup-link {
+    width: 100%; 
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #555; 
+}
+.signup-link a {
+    color: #007BFF; 
+    text-decoration: none;
+    font-weight: 600;
+}
