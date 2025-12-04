@@ -1,37 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PYCOLO - Logic Game for Kids</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYCOLO</title>
 
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #68c4ff, #bdeaff);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* === HEADER === */
+        .top-bar {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Fredoka One', sans-serif;
+            font-size: 70px;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 3px 3px 0 #2a9df4, 6px 6px 0 #1e88e5;
+            letter-spacing: 3px;
+        }
+
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #fff;
+            border: 3px solid #2a9df4;
+            cursor: pointer;
+            transition: transform .2s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        /* === CONTENT === */
+        .home-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu-btn {
+            width: 230px;
+            padding: 18px 0;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background: white;
+            color: #2196f3;
+            box-shadow: 0 4px 0 #1e88e5;
+            transition: .2s;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .kids-img {
+            width: 450px;
+            margin-top: 40px;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+        }
+
+        .settings-btn {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            color: #2196f3;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #1e88e5;
+            transition: .2s;
+        }
+
+        .settings-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
+
 <body>
-  <header class="header">
-    <h1 class="logo">PYCOLO</h1>
-  </header>
+    <header class="top-bar">
+        <h1 class="logo">PYCOLO</h1>
 
-  <main class="home-container">
-    <section class="menu">
-      <button class="menu-btn" id="create-btn">Create</button>
-      <button class="menu-btn" id="open-btn">Open</button>
-      <button class="menu-btn" id="history-btn">History</button>
-      <button class="menu-btn" id="about-btn">About Us</button>
-    </section>
+        <div class="profile">
+            <img src="assets/profile.png" alt="profile" class="profile-img">
+        </div>
+    </header>
 
-    <section class="illustration">
-      <img src="assets/kids-playing.png" alt="Kids playing" class="kids-img">
-    </section>
-  </main>
+    <div class="home-container">
+        <div class="menu">
+            <button class="menu-btn" id="create-btn">Create</button>
+            <button class="menu-btn" id="open-btn">Open</button>
+            <button class="menu-btn" id="history-btn">History</button>
+            <button class="menu-btn" id="about-btn">About Us</button>
+        </div>
 
-  <footer class="footer">
-    <button class="settings-btn">
-      ⚙️
-    </button>
-  </footer>
+        <div class="illustration">
+            <img src="assets/kids-playing.png" class="kids-img">
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <footer class="footer">
+        <button class="settings-btn">⚙️</button>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
